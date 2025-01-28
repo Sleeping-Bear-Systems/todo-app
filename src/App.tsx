@@ -1,6 +1,9 @@
 import { JSX, useState } from "react";
 import { ToDoList } from "./ToDoList";
 import { ToDoItem } from "./ToDoItem";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export function App(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

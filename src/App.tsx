@@ -1,6 +1,7 @@
 import { JSX, useState } from "react";
 import { ToDoList } from "./ToDoList";
 import { ToDoItem } from "./ToDoItem";
+import { ToDoForm } from "./ToDoForm";
 
 export function App(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -10,9 +11,12 @@ export function App(): JSX.Element {
     { id: "3", name: "Buy bread" },
   ]);
 
+  const [selectedItem, setSelectedItem] = useState<ToDoItem | null>(null);
+
   return (
     <>
-      <ToDoList items={items} />
+      <ToDoList items={items} selectItem={setSelectedItem} />
+      <ToDoForm selectedItem={selectedItem} />
     </>
   );
 }

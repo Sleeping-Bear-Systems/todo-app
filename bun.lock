@@ -5,6 +5,7 @@
       "name": "todo-app-2",
       "dependencies": {
         "dotenv": "^16.4.7",
+        "jotai": "^2.11.2",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
       },
@@ -339,6 +340,8 @@
     "is-number": ["is-number@7.0.0", "", {}, "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng=="],
 
     "isexe": ["isexe@2.0.0", "", {}, "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw=="],
+
+    "jotai": ["jotai@2.11.2", "", { "peerDependencies": { "@types/react": ">=17.0.0", "react": ">=17.0.0" }, "optionalPeers": ["@types/react", "react"] }, "sha512-H3xOvsdqjBJnXTvpgAWfff2y1B3wabi1iSA6FFd0FrLaM4ENsRJd+RJQtkNhY4PZgvAODa4PQhau9dheK+pUkw=="],
 
     "js-tokens": ["js-tokens@4.0.0", "", {}, "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="],
 

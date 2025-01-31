@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "dotenv": "^16.4.7",
+        "eslint-config-prettier": "^10.0.1",
         "jotai": "^2.11.2",
         "prettier": "^3.4.2",
         "react": "^19.0.0",

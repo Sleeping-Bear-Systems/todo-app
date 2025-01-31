@@ -8,8 +8,11 @@ export interface ToDoListLineProps {
 
 export function ToDoListLine(props: ToDoListLineProps): JSX.Element {
     return (
-        <li key={props.item.id} onClick={() => props.selectItem(props.item)}>
-            {props.item.name}
+        <li key={props.item.id}>
+            <span onClick={() => props.selectItem(props.item)}>
+                {props.item.name}
+            </span>
+            <button>Edit</button>
         </li>
     );
 }

@@ -12,23 +12,30 @@ export function ToDoForm(props: ToDoFormProps): JSX.Element {
                 <form>
                     <div>
                         <label htmlFor="id">ID:</label>
+                        <br />
                         <input
                             type="text"
                             id="id"
                             name="id"
                             value={props.selectedItem.id}
+                            readOnly
                         />
-                        <br></br>
+                        <br />
                         <label htmlFor="name">Name:</label>
+                        <br />
                         <input
                             type="text"
                             id="name"
                             name="name"
                             value={props.selectedItem.name}
+                            readOnly
                         />
                     </div>
+                    <br />
                     <div>
-                        <button type="submit">Add</button>
+                        <button type="submit">Save</button>
+                        <button type="button">Reset</button>
+                        <button type="button">Cancel</button>
                     </div>
                 </form>
             ) : (

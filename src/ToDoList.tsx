@@ -1,13 +1,22 @@
-import { JSX } from "react";
+import { JSX, useState } from "react";
 import type { ToDoItem } from "./ToDoItem";
 import { ToDoListLine } from "./ToDoListLine";
+import { useAtom } from "jotai";
+import { apiUrlAtom } from "./atoms";
+import { ToDoDetails } from "./ToDoDetails";
+import { ToDoForm } from "./ToDoForm";
 
 export interface ToDoListProps {
     items: ToDoItem[];
-    selectItem: (item: ToDoItem | null) => void;
 }
 
 export function ToDoList(props: ToDoListProps): JSX.Element {
+    const [apiUrl] = useAtom(apiUrlAtom);
+    console.log(apiUrl);
+    const [selectedItem, setSelectedItem] = useState<ToDoItem | null>(null);
+    const [editItem] = useState<ToDoItem | null>(null);
+    console.log(editItem);
+
     return (
         <>
             <h1>To-Do Items</h1>
@@ -17,11 +26,15 @@ export function ToDoList(props: ToDoListProps): JSX.Element {
                         <ToDoListLine
                             key={item.id}
                             item={item}
-                            selectItem={props.selectItem}
+                            selectItem={setSelectedItem}
                         />
                     );
                 })}
             </ul>
+            <hr />
+            <ToDoDetails item={selectedItem} />
+            <hr />
+            <ToDoForm selectedItem={selectedItem} />
         </>
     );
 }

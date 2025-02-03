@@ -1,9 +1,11 @@
 {
-    "cSpell.words": ["VITE"],
+    "cSpell.words": ["vite"],
+    "editor.formatOnSave": true,
+    "eslint.run": "onSave",
     "files.exclude": {
         ".git": true,
         "node_modules": true,
         "bun.lock": true
     },
-    "editor.formatOnSave": true
+    "workbench.settings.useSplitJSON": true
 }

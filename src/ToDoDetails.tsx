@@ -9,7 +9,7 @@ export function ToDoDetails(props: ToDoDetailsProps): JSX.Element {
     return (
         <>
             {props.item !== null ? (
-                <h1>Details for {props.item?.name}</h1>
+                <h1>Details for {props.item.name}</h1>
             ) : (
                 <></>
             )}
